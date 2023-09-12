@@ -1,11 +1,19 @@
 import TimeEntryView from "./components/TimeEntryView";
+import TimeEntryForm from "./components/TimeEntryForm";
 
 function App() {
   return (
     <div>
-      <TimeEntryView comment="Die geschwoften Klammern sind überflüssig" />
-      <TimeEntryView comment="Die geschwoften Klammern sind überflüssig" />
-      <TimeEntryView comment="Die geschwoften Klammern sind überflüssig" />
+      <TimeEntryView
+        timeEntry={{
+          id: "dsadas",
+          comment: "Die geschwoften Klammern sind überflüssig",
+          start: new Date(),
+          end: new Date(),
+          key: "",
+        }}
+      />
+      <TimeEntryForm />
     </div>
   );
 }
