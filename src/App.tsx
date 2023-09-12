@@ -17,6 +17,8 @@ function App() {
       />
       <TimeEntryForm />
       <Counter />
+      <GithubRepoStats repo="facebook/react" />
+      <GithubRepoStats repo="angular/angular" />
     </div>
   );
 }
