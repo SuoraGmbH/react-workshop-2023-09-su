@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { githubRepoDataSchema } from "../domain/GithubRepoData";
 
 interface Props {
   repo: string;
@@ -7,10 +8,16 @@ interface Props {
 const GithubRepoStats: React.FunctionComponent<Props> = ({ repo }) => {
   const [stars, setStars] = useState(4711);
 
+  JSON.parse("2");
+
   useEffect(() => {
     fetch(`https://api.github.com/repos/${repo}`)
       .then((response) => response.json())
-      .then((data) => data.stargazers_count)
+      .then((data: unknown) => {
+        const repoData = githubRepoDataSchema.parse(data);
+
+        return repoData.stargazers_count;
+      })
       .then(setStars);
   }, [repo]);
 
