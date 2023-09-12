@@ -1,5 +1,13 @@
+import TimeEntryView from "./components/TimeEntryView";
+
 function App() {
-  return <h1>Kiki</h1>;
+  return (
+    <div>
+      <TimeEntryView comment="Die geschwoften Klammern sind überflüssig" />
+      <TimeEntryView comment="Die geschwoften Klammern sind überflüssig" />
+      <TimeEntryView comment="Die geschwoften Klammern sind überflüssig" />
+    </div>
+  );
 }
 
 export default App;
