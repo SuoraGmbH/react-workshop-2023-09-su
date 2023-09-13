@@ -11,9 +11,9 @@ export type TimeEntryCreate = Omit<TimeEntry, "id"> & {
   barbarasKey: "4711";
 };
 
-const f: TimeEntryCreate = {
-  barbarasKey: "4711",
-};
+// const f: TimeEntryCreate = {
+//   barbarasKey: "4711",
+// };
 
 export const timeEntrySchema = z.object({
   id: z.string(),
